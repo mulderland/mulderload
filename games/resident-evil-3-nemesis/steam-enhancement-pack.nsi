@@ -381,16 +381,20 @@ SectionGroupEnd
 !endif
 
 Function .onSelChange
-    # Some graphics options are grouped together
-    ${If} ${SectionIsSelected} ${gfx1}
-    ${OrIf} ${SectionIsSelected} ${gfx2}
-    ${OrIf} ${SectionIsSelected} ${gfx3}
-        !insertmacro SelectSection ${gfx1}
+    # Graphics options are a dependency chain: gfx1 <- gfx2 <- gfx3
+    # Selecting a later layer force-selects its prerequisite(s).
+    ${If} ${SectionIsSelected} ${gfx3}
         !insertmacro SelectSection ${gfx2}
-        !insertmacro SelectSection ${gfx3}
-    ${Else}
-        !insertmacro UnselectSection ${gfx1}
+    ${EndIf}
+    ${If} ${SectionIsSelected} ${gfx2}
+        !insertmacro SelectSection ${gfx1}
+    ${EndIf}
+    # Deselecting an earlier layer force-deselects everything built on top of it.
+    ${IfNot} ${SectionIsSelected} ${gfx1}
         !insertmacro UnselectSection ${gfx2}
+        !insertmacro UnselectSection ${gfx3}
+    ${EndIf}
+    ${IfNot} ${SectionIsSelected} ${gfx2}
         !insertmacro UnselectSection ${gfx3}
     ${EndIf}
 
