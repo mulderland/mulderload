@@ -5,7 +5,7 @@ Resident Evil 3: Nemesis *Steam Enhancement Pack* @ mulderland.com
 
 - Downgrades the Steam version to the latest GOG version (v1.0 Hotfix 4) for better compatibility
 - Fixes Steam game time tracking, Steam Overlay, Steam Input, etc.
-- Installs Classic REbirth in a new "rebirth" subfolder
+- Installs Classic REbirth v1.0.3 in a new "rebirth" subfolder
 - Patches the Classic REbirth executable to allow 4GB of memory
 - Installs Modern Control Mods (Modern Controls Plus, Quick Knife Mod)
 - Installs Translation Patches
@@ -49,19 +49,7 @@ I've keeped the "Lossless" version (as default), and the "Dreamcast" version (my
 
 ------------------------------------------------------------------------------------------------------------------------
 
-3) Know issues
-
-3.1) Crash with Carlos when exiting the Clocktower
-
-It should already be fixed by this pack with 2 things:
-- the missing texture R31709.jpg
-- the "disable full screen optimization" on the game executable
-
-If you still have crash around the Clocktower, please report it.
-
-------------------------------------------------------------------------------------------------------------------------
-
-4) Credits & Thanks
+3) Credits & Thanks
 
 This Enhancement Pack was assembled and packaged by Mulder.
 

@@ -2,7 +2,6 @@
   "Resident Evil 3 Nemesis (Steam)": {
     "Executable": "Classic REbirth",
     "Misc": [
-      "Enable HD textures",
       "Enable HQ audio"
     ]
   }

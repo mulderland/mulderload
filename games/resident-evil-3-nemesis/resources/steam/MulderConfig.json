@@ -21,25 +21,12 @@
       "name": "Misc",
       "type": "checkboxGroup",
       "checkboxes": [
-        { "value": "Enable HD textures", "disabledWhen": [{ "!Executable": "Classic REbirth" }] },
         { "value": "Enable HQ audio", "disabledWhen": [{ "!Executable": "Classic REbirth" }] }
       ]
     }
   ],
   "actions": {
     "operations": [
-      {
-        "when": [ { "Misc": "Enable HD textures" } ],
-        "operation": "rename",
-        "source": "rebirth\\_hires.bak",
-        "target": "rebirth\\hires"
-      },
-      {
-        "when": [ { "!Misc": "Enable HD textures" } ],
-        "operation": "rename",
-        "source": "rebirth\\hires",
-        "target": "rebirth\\_hires.bak"
-      },
       {
         "when": [ { "Misc": "Enable HQ audio" } ],
         "operation": "rename",
